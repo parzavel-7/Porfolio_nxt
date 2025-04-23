@@ -1,6 +1,8 @@
 import { cn } from "@/utils/cn";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import MagicButton from "./ui/MagicButton";
+import { FaLocationArrow } from "react-icons/fa";
 
 const Hero = () => {
   return (
@@ -16,7 +18,6 @@ const Hero = () => {
         />
         <Spotlight className="top-20 left-80 h-[80vh] w-[50vw]" fill="blue" />
       </div>
-      {/* <h1 className="max-w-7xl w-max">Welcome to my portfolio</h1> */}
       <div className="absolute top-0 left-0 flex h-screen w-full items-center justify-center dark:bg-black-100">
         <div
           className={cn(
@@ -35,13 +36,21 @@ const Hero = () => {
           </h1>
 
           <TextGenerateEffect
-            className="text-center text-[40px] md:text-5xl lg:text-9xl"
+            className="text-center text-[40px] md:text-5xl lg:text-7xl"
             words="Trying to create something new."
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:test-lg lg:text-2xl">
             Hi, I'm Suraj a front-end developer from Nepal.
           </p>
+
+          <a href="#about">
+            <MagicButton
+              title="See my Works"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a>
         </div>
       </div>
     </div>
