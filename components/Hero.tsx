@@ -49,6 +49,9 @@ const Hero = () => {
               title="See my Works"
               icon={<FaLocationArrow />}
               position="right"
+              handleClick={function (): void {
+                throw new Error("Function not implemented.");
+              }}
             />
           </a>
         </div>
