@@ -1,3 +1,4 @@
+import { BoxGrid } from "@/components/Grid";
 import Hero from "@/components/Hero";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import { Grid } from "lucide-react";
@@ -12,7 +13,7 @@ export default function Home() {
           navItems={[{ name: "Home", link: "/", icon: <FaHome /> }]}
         />
         <Hero />
-        <Grid />
+        <BoxGrid />
       </div>
     </main>
   );
