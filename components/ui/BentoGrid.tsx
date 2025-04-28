@@ -76,6 +76,7 @@ export const BentoGridItem = ({
             />
           )}
         </div>
+        {id === 6 && ''}
       </div>
 
       <div className="transition duration-200 group-hover/bento:translate-x-2">
