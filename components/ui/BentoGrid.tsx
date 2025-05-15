@@ -12,7 +12,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3",
+        "mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[20rem] md:grid-cols-3",
         className
       )}
     >
@@ -43,7 +43,7 @@ export const BentoGridItem = ({
   return (
     <div
       className={cn(
-        "group/bento shadow-input overflow-hidden relative row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none",
+        "group/bento shadow-input  overflow-hidden relative row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none",
         className
       )}
       style={{
@@ -96,13 +96,35 @@ export const BentoGridItem = ({
           <div className="lg:text-3xl max-w-96 z-10 font-sans font-bold text-neutral-600 dark:text-neutral-200 test-lg">
             {title}
           </div>
-        </div>
-        {id == 2 && <GlobeDemo />}
+          {id == 2 && <GlobeDemo />}
 
-        {id == 3 && (
-          <div className="flex gap-1 lg:gap-5 w-fit absolute ">
-          </div>
-        )}
+          {id == 3 && (
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+              <div className="flex flex-col gap-3 lg:gap-3 lg:mt-20">
+                {["Next.js", "TypeScript", "MySql"].map((item) => (
+                  <span
+                    key={item}
+                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base lg:opacity-100 opacity-50 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+              </div>
+              <div className="flex flex-col gap-3 lg:gap-3 lg:mt-20">
+                <span className="py-4 px-3 rounded-lg text-center bg-[#10132e]" />
+                {["SEO", "PHP", "Java"].map((item) => (
+                  <span
+                    key={item}
+                    className="py-2 lg:py-4 lg:px-3 px-3 text-xs lg:text-base lg:opacity-100 opacity-50 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
